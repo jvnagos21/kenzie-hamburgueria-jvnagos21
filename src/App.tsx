@@ -1,8 +1,8 @@
 import React from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
-import { UserProvider } from "./Contexts/userContext";
-import { CartProvider } from "./Contexts/cartContext";
+import { UserProvider } from "./contexts/userContext";
+import { CartProvider } from "./contexts/cartContext";
 import { RoutesHub as Routes } from "./routes";
 function App() {
   return (

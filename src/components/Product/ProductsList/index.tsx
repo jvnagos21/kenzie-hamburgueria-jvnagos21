@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { toast } from "react-toastify";
-import { CartContext, iProducts } from "../../Contexts/cartContext";
-import { Button } from "../../styles/button";
-import { Product } from "../product";
+import { CartContext, iProducts } from "../../../contexts/cartContext";
+import { Button } from "../../../styles/button";
+import { Product } from "../ProductCard";
 import { StyledProductsBox, FilterTools } from "./styles";
 
 export const ProductsList = () => {

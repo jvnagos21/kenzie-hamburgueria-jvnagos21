@@ -1,7 +1,7 @@
 import DeleteTwoToneIcon from "@mui/icons-material/DeleteTwoTone";
 import { IconButton } from "@mui/material";
 import { useContext } from "react";
-import { CartContext, iProducts } from "../../Contexts/cartContext";
+import { CartContext, iProducts } from "../../../contexts/cartContext";
 import { ProductCartContent } from "./styles";
 
 interface ICartProductProps {

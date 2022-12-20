@@ -3,8 +3,8 @@ import { UseFormReset } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { Api } from "../../services/requests";
-import { iLoginForm } from "../../components/forms/login";
-import { iSignupForm } from "../../components/forms/signup";
+import { iLoginForm } from "../../components/forms/Login";
+import { iSignupForm } from "../../components/forms/Signup";
 
 interface iUserProps {
   children: React.ReactNode;

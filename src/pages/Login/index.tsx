@@ -1,7 +1,7 @@
 import React from "react";
 import { LoginContainer } from "./styles";
-import { FormLogin } from "../../components/forms/login";
-import { Branding } from "../../components/branding";
+import { FormLogin } from "../../components/forms/Login";
+import { Branding } from "../../components/Branding";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 export const Login = () => {

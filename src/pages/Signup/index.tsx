@@ -1,8 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import { Branding } from "../../components/branding";
-import { FormSignup } from "../../components/forms/signup";
+import { Branding } from "../../components/Branding";
+import { FormSignup } from "../../components/forms/Signup";
 import { SignupContainer } from "./styles";
 
 const Signup = () => {

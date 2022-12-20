@@ -2,7 +2,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { TextField } from "@mui/material";
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { UserContext } from "../../../Contexts/userContext";
+import { UserContext } from "../../../contexts/userContext";
 import { Button, DefaultLink } from "../../../styles/button";
 import { signupSchema } from "./signupSchema";
 import { FormSignupContainer } from "./styles";

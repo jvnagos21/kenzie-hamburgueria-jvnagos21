@@ -1,4 +1,4 @@
-import { Button } from "../../styles/button";
+import { Button } from "../../../styles/button";
 import { ProductContent, ProductInfo } from "./styles";
 
 interface iProductData {

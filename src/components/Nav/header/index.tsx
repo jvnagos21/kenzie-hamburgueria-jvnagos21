@@ -1,6 +1,6 @@
 import { StyledHeader } from "./styles";
-import { NavBar } from "../navBar";
-import logo from "../../assets/mainLogo.svg";
+import { NavBar } from "../NavBar";
+import logo from "../../../assets/mainLogo.svg";
 
 export const Header = () => {
   return (

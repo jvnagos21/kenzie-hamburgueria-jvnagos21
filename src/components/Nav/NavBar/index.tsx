@@ -4,10 +4,10 @@ import Badge, { BadgeProps } from "@mui/material/Badge";
 import IconButton from "@mui/material/IconButton";
 import { createTheme, styled } from "@mui/material/styles";
 import { useContext } from "react";
-import { UserContext } from "../../Contexts/userContext";
-import { CartContext } from "../../Contexts/cartContext";
+import { UserContext } from "../../../contexts/userContext";
+import { CartContext } from "../../../contexts/cartContext";
 import { StyledNavBar } from "./styles";
-import { ExpandInput } from "../expandInput";
+import { SearchInput } from "../SearchBar";
 const CartTheme = createTheme({
   palette: {
     primary: {
@@ -35,7 +35,7 @@ export const NavBar = () => {
   return (
     <StyledNavBar isExpanded={isexpanded}>
       <li>
-        <ExpandInput />
+        <SearchInput />
       </li>
       <li>
         <IconButton

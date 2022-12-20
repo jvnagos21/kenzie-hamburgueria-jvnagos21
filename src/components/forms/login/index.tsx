@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { UserContext } from "../../../Contexts/userContext";
+import { UserContext } from "../../../contexts/userContext";
 import { useForm } from "react-hook-form";
 import { TextField } from "@mui/material";
 import { yupResolver } from "@hookform/resolvers/yup";

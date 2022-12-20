@@ -1,10 +1,8 @@
-import { useContext, useEffect, useRef } from "react";
-
-import { CartContext } from "../../Contexts/cartContext";
-import { CartProduct } from "../cartProduct";
-import { CartTotal } from "../cartTotal";
+import { useContext, useRef } from "react";
+import { CartContext } from "../../../contexts/cartContext";
+import { CartProduct } from "../CartProduct";
+import { CartTotal } from "../CartTotal";
 import { CartBox, CartContent, CartHeader } from "./styles";
-
 import CloseTwoToneIcon from "@mui/icons-material/CloseTwoTone";
 import { IconButton } from "@mui/material";
 

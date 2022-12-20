@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { CartContext } from "../../Contexts/cartContext";
-import { Button } from "../../styles/button";
+import { CartContext } from "../../../contexts/cartContext";
+import { Button } from "../../../styles/button";
 import { FooterStyled } from "./styles";
 export const CartTotal = () => {
   const { currentSale, setCurrentSale, setTotalItemCart } =
