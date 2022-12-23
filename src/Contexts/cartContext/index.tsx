@@ -36,7 +36,7 @@ interface iCartContext {
 export const CartContext = createContext({} as iCartContext);
 
 export const CartProvider = ({ children }: iCartProps) => {
-  const [products, setProducts] = useState([] as iProducts[]);
+  const [products, setProducts] = useState<iProducts[]>([]);
   const [filteredProducts, setFilteredProducts] = useState([] as iProducts[]);
   const [currentSale, setCurrentSale] = useState([] as iProducts[]);
   const [inputValue, setInputValue] = useState("");

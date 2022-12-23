@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 import { UseFormReset } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -11,6 +11,7 @@ interface iUserProps {
 }
 
 interface iUserContext {
+  user: iUser | null;
   signupRequest: (
     data: iSignupForm,
     formReset: UseFormReset<iSignupForm>
@@ -21,9 +22,16 @@ interface iUserContext {
   ) => Promise<void>;
   handleLogout: () => void;
 }
-export const UserContext = createContext({} as iUserContext);
 
+export interface iUser {
+  id: string;
+  name: string;
+  email: string;
+}
+
+export const UserContext = createContext({} as iUserContext);
 export const UserProvider = ({ children }: iUserProps) => {
+  const [user, setUser] = useState<iUser | null>(null);
   const navigate = useNavigate();
   const loginRequest = async (
     formdata: iLoginForm,
@@ -34,6 +42,7 @@ export const UserProvider = ({ children }: iUserProps) => {
       toast.success("Login efetuado!");
       localStorage.clear();
       console.log(data);
+      setUser(data.user);
       localStorage.setItem("userToken", data.accessToken);
       formReset();
       navigate("/main_page");
@@ -42,6 +51,7 @@ export const UserProvider = ({ children }: iUserProps) => {
       toast.error("Ops! algo deu errado.");
     }
   };
+
   const signupRequest = async (
     data: iSignupForm,
     formReset: UseFormReset<iSignupForm>
@@ -56,13 +66,16 @@ export const UserProvider = ({ children }: iUserProps) => {
       toast.error("Ops! Algo deu errado.");
     }
   };
+
   const handleLogout = () => {
     localStorage.clear();
     navigate("/");
   };
+
   return (
     <UserContext.Provider
       value={{
+        user,
         loginRequest,
         signupRequest,
         handleLogout,

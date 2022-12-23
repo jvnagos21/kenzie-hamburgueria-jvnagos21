@@ -1,15 +1,15 @@
 import { Button } from "../../../styles/button";
 import { ProductContent, ProductInfo } from "./styles";
-
-interface iProductData {
-  id: number;
-  name: string;
-  category: string;
-  price: number;
-  img: string;
-}
+import { iProducts } from "../../../contexts/cartContext";
+// interface iProductData {
+//   id: number;
+//   name: string;
+//   category: string;
+//   price: number;
+//   img: string;
+// }
 interface iProductProps {
-  product: iProductData;
+  product: iProducts;
   onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 export const Product = ({ product, onClick }: iProductProps) => {

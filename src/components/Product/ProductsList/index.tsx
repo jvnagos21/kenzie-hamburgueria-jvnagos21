@@ -7,7 +7,7 @@ import { StyledProductsBox, FilterTools } from "./styles";
 
 export const ProductsList = () => {
   const {
-    products: data,
+    products,
     currentSale,
     setCurrentSale,
     setFilteredProducts,
@@ -18,7 +18,7 @@ export const ProductsList = () => {
   } = useContext(CartContext);
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     let obj: iProducts | null =
-      data.find(({ id }) => parseInt(e.currentTarget.id) === id) || null;
+      products.find(({ id }) => parseInt(e.currentTarget.id) === id) || null;
 
     if (!currentSale.find((elem) => parseInt(e.currentTarget.id) === elem.id)) {
       if (obj !== null) {
@@ -34,7 +34,7 @@ export const ProductsList = () => {
     }
   };
 
-  const newData = filteredProducts.length ? filteredProducts : data;
+  const newData = filteredProducts.length ? filteredProducts : products;
 
   return (
     <StyledProductsBox>
