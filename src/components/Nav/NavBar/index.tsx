@@ -4,10 +4,11 @@ import Badge, { BadgeProps } from "@mui/material/Badge";
 import IconButton from "@mui/material/IconButton";
 import { createTheme, styled } from "@mui/material/styles";
 import { useContext } from "react";
-import { UserContext } from "../../../contexts/userContext";
-import { CartContext } from "../../../contexts/cartContext";
+import { UserContext } from "../../../Providers/userContext";
+import { CartContext } from "../../../Providers/cartContext";
 import { StyledNavBar } from "./styles";
 import { SearchInput } from "../SearchBar";
+
 const CartTheme = createTheme({
   palette: {
     primary: {
@@ -18,6 +19,7 @@ const CartTheme = createTheme({
     },
   },
 });
+
 const StyledBadge = styled(Badge)<BadgeProps>(({ theme }) => ({
   "& .MuiBadge-badge": {
     right: -3,

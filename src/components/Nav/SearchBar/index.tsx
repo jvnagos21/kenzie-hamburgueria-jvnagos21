@@ -1,7 +1,7 @@
 import SearchIcon from "@mui/icons-material/Search";
 import { IconButton, InputAdornment } from "@mui/material";
 import { ChangeEvent, useContext, useEffect } from "react";
-import { CartContext } from "../../../contexts/cartContext";
+import { CartContext } from "../../../Providers/cartContext";
 import { StyledInput, TextField } from "./styles";
 export const SearchInput = () => {
   const { isexpanded, setisexpanded, setInputValue, isError, inputValue } =

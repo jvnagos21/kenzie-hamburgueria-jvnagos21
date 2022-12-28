@@ -3,33 +3,11 @@ import { UseFormReset } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { Api } from "../../services/requests";
-import { iLoginForm } from "../../components/forms/Login";
-import { iSignupForm } from "../../components/forms/Signup";
-
-interface iUserProps {
-  children: React.ReactNode;
-}
-
-interface iUserContext {
-  user: iUser | null;
-  signupRequest: (
-    data: iSignupForm,
-    formReset: UseFormReset<iSignupForm>
-  ) => Promise<void>;
-  loginRequest: (
-    data: iLoginForm,
-    formReset: UseFormReset<iLoginForm>
-  ) => Promise<void>;
-  handleLogout: () => void;
-}
-
-export interface iUser {
-  id: string;
-  name: string;
-  email: string;
-}
-
+import { iLoginForm } from "../../components/forms/Login/@types";
+import { iSignupForm } from "../../components/forms/Signup/@types";
+import { iUserContext, iUser, iUserProps } from "./@types";
 export const UserContext = createContext({} as iUserContext);
+
 export const UserProvider = ({ children }: iUserProps) => {
   const [user, setUser] = useState<iUser | null>(null);
   const navigate = useNavigate();

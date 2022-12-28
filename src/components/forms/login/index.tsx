@@ -1,16 +1,12 @@
 import { useContext } from "react";
-import { UserContext } from "../../../contexts/userContext";
+import { UserContext } from "../../../Providers/userContext";
 import { useForm } from "react-hook-form";
 import { TextField } from "@mui/material";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { FormLoginContainer } from "./styles";
 import { Button, SecondaryLink } from "../../../styles/button";
 import { loginSchema } from "./loginSchema";
-
-export interface iLoginForm {
-  email: string;
-  password: string;
-}
+import { iLoginForm } from "./@types";
 
 export const FormLogin = () => {
   const {

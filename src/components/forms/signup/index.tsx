@@ -2,17 +2,11 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { TextField } from "@mui/material";
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { UserContext } from "../../../contexts/userContext";
+import { UserContext } from "../../../Providers/userContext";
 import { Button, DefaultLink } from "../../../styles/button";
 import { signupSchema } from "./signupSchema";
 import { FormSignupContainer } from "./styles";
-
-export interface iSignupForm {
-  name: string;
-  email: string;
-  password: string;
-  confirmPwd?: string;
-}
+import { iSignupForm } from "./@types";
 
 export const FormSignup = () => {
   const {

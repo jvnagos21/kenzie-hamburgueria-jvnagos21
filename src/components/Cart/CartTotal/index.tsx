@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CartContext } from "../../../contexts/cartContext";
+import { CartContext } from "../../../Providers/cartContext";
 import { Button } from "../../../styles/button";
 import { FooterStyled } from "./styles";
 export const CartTotal = () => {

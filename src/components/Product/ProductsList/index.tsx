@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { toast } from "react-toastify";
-import { CartContext, iProducts } from "../../../contexts/cartContext";
+import { CartContext } from "../../../Providers/cartContext";
+import { iProducts } from "../../../Providers/cartContext/@types";
 import { Button } from "../../../styles/button";
 import { Product } from "../ProductCard";
 import { StyledProductsBox, FilterTools } from "./styles";
