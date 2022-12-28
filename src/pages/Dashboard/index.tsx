@@ -6,7 +6,8 @@ import { useContext } from "react";
 import { CartContext } from "../../Providers/cartContext";
 import { Cart } from "../../components/Cart/CartModal";
 import { useEffect } from "react";
-const MainPage = () => {
+
+const Dashboard = () => {
   const { isOpenCart, fetchProducts } = useContext(CartContext);
   useEffect(() => {
     fetchProducts();
@@ -22,4 +23,4 @@ const MainPage = () => {
   );
 };
 
-export default MainPage;
+export default Dashboard;

@@ -23,7 +23,7 @@ export const UserProvider = ({ children }: iUserProps) => {
       setUser(data.user);
       localStorage.setItem("userToken", data.accessToken);
       formReset();
-      navigate("/main_page");
+      navigate("/dashboard");
     } catch (error) {
       console.log(error);
       toast.error("Ops! algo deu errado.");
